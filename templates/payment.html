@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+    <h1>Payment for Booking</h1>
+    <p>Booking ID: {{ booking.id }}</p>
+    <p>Table ID: {{ booking.table_id }}</p>
+    <p>Amount: ${{ booking.amount }}</p>
+    <form action="/confirm-booking/{{ booking.id }}" method="post">
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+</html>
